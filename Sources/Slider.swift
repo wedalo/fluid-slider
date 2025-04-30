@@ -14,13 +14,13 @@ private let kBlurRadiusIphonePlus: CGFloat = 18 // blur a little bit more to avo
 
 private func isAnimationAllowed() -> Bool {
     let isUnderHighload: Bool
-    
+    let isSimulator: Bool
     if #available(iOS 11.0, *) {
         isUnderHighload = ProcessInfo.processInfo.thermalState == .serious || ProcessInfo.processInfo.thermalState == .critical
     } else {
         isUnderHighload = false
     }
-    let isSimulator: Bool
+    
     #if targetEnvironment(simulator)
         isSimulator = true
     #else
