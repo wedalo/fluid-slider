@@ -20,7 +20,7 @@ private func isAnimationAllowed() -> Bool {
     } else {
         isUnderHighload = false
     }
-        
+    
     #if targetEnvironment(simulator)
         isSimulator = true
     #else
